@@ -20,7 +20,7 @@ vim.opt.shiftwidth = 4
 -- Expandtab
 vim.opt.expandtab = false
 -- CMD Height
-vim.o.cmdheight = 2
+vim.o.cmdheight = 1
 
 -- Scrolloff
 vim.o.scrolloff = 8

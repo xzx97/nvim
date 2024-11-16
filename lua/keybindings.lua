@@ -35,5 +35,15 @@ map('n', '<C-j>', '<CMD>NavigatorDown<CR>', opt)
 -- NvimTreeToggle
 map("n", "<C-m>", ":NvimTreeToggle<CR>", opt)
 
--- null ls formatting
-map("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>", opt)
+-- Bufferline
+map('n', '<M-1>', ':BufferLineGoToBuffer 1<CR>', opt)
+map('n', '<M-2>', ':BufferLineGoToBuffer 2<CR>', opt)
+map('n', '<M-3>', ':BufferLineGoToBuffer 3<CR>', opt)
+map('n', '<M-4>', ':BufferLineGoToBuffer 4<CR>', opt)
+map('n', '<M-5>', ':BufferLineGoToBuffer 5<CR>', opt)
+map('n', '<M-6>', ':BufferLineGoToBuffer 6<CR>', opt)
+map('n', '<M-7>', ':BufferLineGoToBuffer 7<CR>', opt)
+map('n', '<M-8>', ':BufferLineGoToBuffer 8<CR>', opt)
+map('n', '<M-9>', ':BufferLineGoToBuffer 9<CR>', opt)
+map('n', '<leader>bn', ':BufferLineCycleNext<CR>', opt)
+map('n', '<leader>bp', ':BufferLineCyclePrev<CR>', opt)
