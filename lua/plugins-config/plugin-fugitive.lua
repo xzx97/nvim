@@ -5,8 +5,8 @@ return {
 		cmd = "Git",
 		config = function()
 			-- convert
-			vim.cmd.cnoreabbrev([[git Git]])
-			vim.cmd.cnoreabbrev([[gp Git push]])
+			-- vim.cmd.cnoreabbrev([[git Git]])
+			-- vim.cmd.cnoreabbrev([[gp Git push]])
 		end,
 	},
 }
