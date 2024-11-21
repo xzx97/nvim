@@ -40,6 +40,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 lspconfig.pylsp.setup{
   settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = {'E501'},
+					maxLineLength = 200
+				}
+			}
+		}
   }
 }
 
