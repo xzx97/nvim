@@ -38,19 +38,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-lspconfig.pylsp.setup{
-  settings = {
-		pylsp = {
-			plugins = {
-				pycodestyle = {
-					ignore = {'E501'},
-					maxLineLength = 200
-				}
-			}
-		}
-  }
-}
-
 lspconfig.cmake.setup{
 	settings = {
 		['cmake'] = {}
@@ -72,3 +59,31 @@ lspconfig.lua_ls.setup{
 		}
 	}
 }
+
+lspconfig.pyright.setup{
+	settings = {
+        python = {
+            pythonPath = vim.env.CONDA_PREFIX and vim.env.CONDA_PREFIX .. "/bin/python" or "/usr/bin/python",
+        },
+    },
+}
+
+--
+-- lspconfig.pylsp.setup{
+--   settings = {
+-- 		pylsp = {
+-- 			plugins = {
+-- 				pylsp_mypy = {
+-- 					enabled = true,
+-- 					live_mode = true
+-- 				},
+-- 
+-- 				pycodestyle = {
+-- 					ignore = {'E501'},
+-- 					maxLineLength = 200
+-- 				}
+-- 			}
+-- 		}
+--   }
+-- }
+

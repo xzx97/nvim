@@ -33,7 +33,7 @@ map('n', '<C-j>', '<CMD>NavigatorDown<CR>', opt)
 -- map("n", "<C-l>", "<C-w>l", opt)
 
 -- NvimTreeToggle
-map("n", "<C-m>", ":NvimTreeToggle<CR>", opt)
+-- map("n", "<C-m>", ":NvimTreeToggle<CR>", opt)
 
 -- Bufferline
 map('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>', opt)

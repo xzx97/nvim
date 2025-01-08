@@ -18,7 +18,7 @@ return {
 			}
 			require("mason-lspconfig").setup {
 				ensure_installed = {
-					"pylsp",
+					"pyright",
 					"lua_ls",
 					"clangd",
 				}
