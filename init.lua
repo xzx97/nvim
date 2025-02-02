@@ -10,8 +10,5 @@ require("plugins")
 -- Lsp Settings
 require("lspsettings")
 
--- Nvim-cmp Settings
--- require("cmpsettings")
-
 -- Themes Settings
 require("themes")
