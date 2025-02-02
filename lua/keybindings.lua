@@ -3,7 +3,7 @@ vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
 -- Local variable
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opt = { noremap = true, silent = true }
 
 -- Scroll Up and Down
@@ -20,20 +20,6 @@ map("n", "s<", ":vertical resize -20<CR>", opt)
 map("n", "s=", "<C-w>=", opt)
 map("n", "sj", ":resize +10<CR>", opt)
 map("n", "sk", ":resize -10<CR>", opt)
-
--- Windows jump
-map('n', '<C-h>', '<CMD>NavigatorLeft<CR>', opt)
-map('n', '<C-l>', '<CMD>NavigatorRight<CR>', opt)
-map('n', '<C-k>', '<CMD>NavigatorUp<CR>', opt)
-map('n', '<C-j>', '<CMD>NavigatorDown<CR>', opt)
--- map('n', '<C-p>', '<CMD>NavigatorPrevious<CR>', opt)
--- map("n", "<C-h>", "<C-w>h", opt)
--- map("n", "<C-j>", "<C-w>j", opt)
--- map("n", "<C-k>", "<C-w>k", opt)
--- map("n", "<C-l>", "<C-w>l", opt)
-
--- NvimTreeToggle
--- map("n", "<C-m>", ":NvimTreeToggle<CR>", opt)
 
 -- Bufferline
 map('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>', opt)

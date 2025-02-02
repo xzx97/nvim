@@ -38,17 +38,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-lspconfig.cmake.setup{
+lspconfig.cmake.setup {
 	settings = {
 		['cmake'] = {}
 	}
 }
-lspconfig.clangd.setup{
+lspconfig.clangd.setup {
 	settings = {
 		['clangd'] = {}
 	}
 }
-lspconfig.lua_ls.setup{
+lspconfig.lua_ls.setup {
 	settings = {
 		Lua = {
 			diagnostics = {
@@ -60,30 +60,10 @@ lspconfig.lua_ls.setup{
 	}
 }
 
-lspconfig.pyright.setup{
+lspconfig.pyright.setup {
 	settings = {
-        python = {
-            pythonPath = vim.env.CONDA_PREFIX and vim.env.CONDA_PREFIX .. "/bin/python" or "/usr/bin/python",
-        },
-    },
+		python = {
+			pythonPath = vim.env.CONDA_PREFIX and vim.env.CONDA_PREFIX .. "/bin/python" or "/usr/bin/python",
+		},
+	},
 }
-
---
--- lspconfig.pylsp.setup{
---   settings = {
--- 		pylsp = {
--- 			plugins = {
--- 				pylsp_mypy = {
--- 					enabled = true,
--- 					live_mode = true
--- 				},
--- 
--- 				pycodestyle = {
--- 					ignore = {'E501'},
--- 					maxLineLength = 200
--- 				}
--- 			}
--- 		}
---   }
--- }
-
