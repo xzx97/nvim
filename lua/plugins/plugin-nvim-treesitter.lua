@@ -9,7 +9,6 @@ return {
 			configs.setup({
 				ensure_installed = {
 					"c", "cpp", "cmake", "lua", "vim", "vimdoc",
-					"query", "heex", "javascript", "html",
 					"python", "markdown", "markdown_inline" },
 				sync_install = false,
 				highlight = { enable = true },

@@ -18,8 +18,8 @@ return {
 			map('n', '<leader>7', ':BufferLineGoToBuffer 7<CR>', opt)
 			map('n', '<leader>8', ':BufferLineGoToBuffer 8<CR>', opt)
 			map('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>', opt)
-			map('n', '<leader>bn', ':BufferLineCycleNext<CR>', opt)
-			map('n', '<leader>bp', ':BufferLineCyclePrev<CR>', opt)
+			map('n', '<leader>]', ':BufferLineCycleNext<CR>', opt)
+			map('n', '<leader>[', ':BufferLineCyclePrev<CR>', opt)
 			map("n", "<leader>c", ":bdelete %<CR>", opt)
 		end,
 	}

@@ -37,33 +37,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
-
-lspconfig.cmake.setup {
-	settings = {
-		['cmake'] = {}
-	}
-}
-lspconfig.clangd.setup {
-	settings = {
-		['clangd'] = {}
-	}
-}
-lspconfig.lua_ls.setup {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim' }
-			}
-		},
-		['lua_ls'] = {
-		}
-	}
-}
-
-lspconfig.pyright.setup {
-	settings = {
-		python = {
-			pythonPath = vim.env.CONDA_PREFIX and vim.env.CONDA_PREFIX .. "/bin/python" or "/usr/bin/python",
-		},
-	},
-}

@@ -1,14 +1,20 @@
--- Basic Settings
-require("basic")
+-- Add lazy to path
+require("utils")
 
--- Key Bindings
-require("keybindings")
+-- require("core")
+-- 
+-- require("plugins")
+-- 
+-- require("lsp")
 
--- Packer Manager
-require("plugins")
+-- 加载 autoload.lua 递归加载 plugins 目录
+local load_plugins = require("utils.autoload")
 
--- Lsp Settings
-require("lspsettings")
+-- 调用 lazy.nvim 并自动加载 plugins/
+require("lazy").setup(load_plugins("plugins"))
 
--- Themes Settings
-require("themes")
+require("lazy").setup(load_plugins("core"))
+
+require("lazy").setup(load_plugins("lsp"))
+
+vim.cmd [[colorscheme catppuccin]]
