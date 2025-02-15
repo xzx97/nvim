@@ -1,7 +1,7 @@
 return {
 	{
 		"hrsh7th/nvim-cmp",       -- 🌟 核心补全引擎
-		event = "InsertEnter",    -- 仅在插入模式下加载，提高启动速度
+		event = "VeryLazy",    -- 仅在插入模式下加载，提高启动速度
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp", -- LSP 补全
 			"hrsh7th/cmp-buffer", -- 缓冲区补全
