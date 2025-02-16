@@ -13,7 +13,15 @@ vim.opt.rtp:prepend(lazypath)
 
 -- 先手动加载 plenary.nvim 避免循环依赖
 local plenary_path = vim.fn.stdpath("data") .. "/lazy/plenary.nvim"
-if vim.uv.fs_stat(plenary_path) then
-  vim.opt.rtp:prepend(plenary_path)
+if not vim.uv.fs_stat(plenary_path) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/nvim-lua/plenary.nvim.git",
+    "--branch=master",
+    plenary_path,
+  })
 end
+vim.opt.rtp:prepend(plenary_path)
 
