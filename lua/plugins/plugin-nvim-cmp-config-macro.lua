@@ -84,13 +84,13 @@ return {
 
 				mapping = {
 					-- 上一个
-					['<C-k>'] = cmp.mapping.select_prev_item(),
+					['<A-k>'] = cmp.mapping.select_prev_item(),
 					-- 下一个
-					['<C-j>'] = cmp.mapping.select_next_item(),
+					['<A-j>'] = cmp.mapping.select_next_item(),
 					-- 出现补全
-					['<C-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+					['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
 					-- 取消
-					['<C-,>'] = cmp.mapping({
+					['<A-,>'] = cmp.mapping({
 						i = cmp.mapping.abort(),
 						c = cmp.mapping.close(),
 					}),
@@ -102,8 +102,8 @@ return {
 						behavior = cmp.ConfirmBehavior.Replace
 					}),
 					-- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-					['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-					['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+					['<A-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+					['<A-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
 				},
 
 				-- Set configuration for specific filetype.
