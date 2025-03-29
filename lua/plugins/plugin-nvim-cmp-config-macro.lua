@@ -84,9 +84,9 @@ return {
 
 				mapping = {
 					-- 上一个
-					['<A-k>'] = cmp.mapping.select_prev_item(),
+					['<S-Tab>'] = cmp.mapping.select_prev_item(),
 					-- 下一个
-					['<A-j>'] = cmp.mapping.select_next_item(),
+					['<Tab>'] = cmp.mapping.select_next_item(),
 					-- 出现补全
 					['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
 					-- 取消
