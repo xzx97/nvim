@@ -18,7 +18,6 @@ return {
 			}
 			require("mason-lspconfig").setup {
 				ensure_installed = {
-					"basedpyright",
 					"lua_ls",
 				}
 			}
@@ -28,7 +27,12 @@ return {
 	{
 		"glepnir/lspsaga.nvim", -- LSP UI 增强
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				lightbulb = {
+					enable = true,
+					sign   = false
+				}
+			})
 		end,
 	},
 }

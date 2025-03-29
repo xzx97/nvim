@@ -1,13 +1,13 @@
 return {
 	{
-		"hrsh7th/nvim-cmp",       -- 🌟 核心补全引擎
+		"hrsh7th/nvim-cmp",    -- 🌟 核心补全引擎
 		event = "VeryLazy",    -- 仅在插入模式下加载，提高启动速度
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp", -- LSP 补全
 			"hrsh7th/cmp-buffer", -- 缓冲区补全
-			"hrsh7th/cmp-path",   -- 路径补全
+			"hrsh7th/cmp-path", -- 路径补全
 			"hrsh7th/cmp-cmdline", -- 命令行补全
-			"L3MON4D3/LuaSnip",   -- 代码片段引擎
+			"L3MON4D3/LuaSnip", -- 代码片段引擎
 			"saadparwaiz1/cmp_luasnip", -- LuaSnip 补全
 			"onsails/lspkind.nvim", -- 显示补全项的图标
 		},
@@ -21,6 +21,9 @@ return {
 			local lspkind = require("lspkind")
 			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+			local get_current_working_directory = function()
+				return vim.fn.getcwd() -- 获取当前工作目录
+			end
 
 			cmp.setup({
 				snippet = {
@@ -29,11 +32,16 @@ return {
 					end
 				},
 
+
 				sources = cmp.config.sources {
-					{ neme = "path" },
 					{ name = "nvim_lsp", keyword_length = 1 },
-					{ name = "buffer",   keyword_length = 3 },
 					{ name = "luasnip",  keyword_length = 2 },
+					{ name = "buffer",   keyword_length = 3 },
+					{ name = "path", keyword_length = 4, option = {
+						get_cwd = function()
+							return get_current_working_directory()
+						end
+					} },
 				},
 				formatting = {
 					fields = { "kind", "abbr", "menu" }, -- 指定补全项的字段顺序
@@ -107,13 +115,18 @@ return {
 				},
 
 				-- Set configuration for specific filetype.
-				cmp.setup.filetype("gitcommit", {
+				cmp.setup.filetype("*", {
 					sources = cmp.config.sources({
-						{ name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
-					}, {
-						{ name = "buffer" },
+						{ name = "path" },
 					}),
 				}),
+				-- cmp.setup.filetype("gitcommit", {
+				-- 	sources = cmp.config.sources({
+				-- 		{ name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+				-- 	}, {
+				-- 		{ name = "buffer" },
+				-- 	}),
+				-- }),
 
 				-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 				cmp.setup.cmdline({ "/", "?" }, {
