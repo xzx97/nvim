@@ -1,14 +1,14 @@
 return {
 	{
 		event = "VeryLazy",
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/null-ls.nvim",
 		config = function()
-			local null_ls = require("null-ls")
+			local none_ls = require("none-ls")
 
-			null_ls.setup({
+			none_ls.setup({
 				sources = {
-					null_ls.builtins.formatting.ruff,
-					null_ls.builtins.diagnostics.ruff
+					none_ls.builtins.formatting.ruff,
+					none_ls.builtins.diagnostics.ruff
 				},
 			})
 		end,
