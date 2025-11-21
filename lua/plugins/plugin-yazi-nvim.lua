@@ -8,8 +8,7 @@ return {
 		  "<leader>-",
 		  "<cmd>Yazi<cr>",
 		  desc = "Open yazi at the current file",
-		},
-		{
+		}, {
 		  -- Open in the current working directory
 		  "<leader>cw",
 		  "<cmd>Yazi cwd<cr>",
@@ -65,8 +64,8 @@ return {
 		-- - you can opt out of all keymaps by setting `keymaps = false`
 		keymaps = {
 		  show_help = '<f1>',
-		  open_file_in_vertical_split = '<c-v>',
-		  open_file_in_horizontal_split = '<c-x>',
+		  open_file_in_vertical_split = '<leader>t',
+		  open_file_in_horizontal_split = '<a-x>',
 		  open_file_in_tab = '<c-t>',
 		  grep_in_directory = '<c-s>',
 		  replace_in_directory = '<c-g>',
