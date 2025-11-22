@@ -1,11 +1,17 @@
--- 需要 nvim-lspconfig
-local lspconfig = require("lspconfig")
+-- lua/lsp/servers/pbls.lua
+local util = require("lspconfig.util")
 
-lspconfig.pbls.setup {
-  cmd = { "pbls" },  -- 命令，必须在 PATH 里
-  filetypes = { "proto" }, -- 只处理 proto 文件
-  root_dir = lspconfig.util.root_pattern("buf.yaml", "BUILD.bazel", ".git"),
+return {
+  name = "pbls",
+
+  cmd = { "pbls" },
+
+  filetypes = { "proto" },
+
+  root_dir = util.root_pattern("buf.yaml", "BUILD.bazel", ".git"),
+
   settings = {
-    -- 可选: 可以添加 protolint 规则
-  }
+    -- protolint 之类的配置可放这
+  },
 }
+

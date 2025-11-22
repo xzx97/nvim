@@ -1,13 +1,15 @@
-local lspconfig = require('lspconfig')
+-- lua/lsp/servers/luals.lua
+return {
+  name = "lua_ls",
+  filetypes = { "lua" },
 
-lspconfig.lua_ls.setup {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim' }
-			}
-		},
-		['lua_ls'] = {
-		}
-	}
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+    ["lua_ls"] = {},
+  },
 }
+

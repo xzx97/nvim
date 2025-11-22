@@ -1,9 +1,13 @@
-local lspconfig = require('lspconfig')
+-- lua/lsp/servers/ruff.lua
+return {
+  name = "ruff",
 
-lspconfig.ruff.setup({
-	init_options = {
-		settings = {
-			logLevel = 'debug',
-		}
-	}
-})
+  filetypes = { "python" },
+
+  init_options = {
+    settings = {
+      logLevel = "debug",
+    },
+  },
+}
+
