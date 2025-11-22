@@ -1,7 +1,6 @@
 ---@module "lazy"
 ---@type LazySpec
 return {
-	{
   'saghen/blink.cmp',
   dependencies = { 'rafamadriz/friendly-snippets' },
   version = '1.*',
@@ -47,7 +46,23 @@ return {
     },
 
     keymap = {
-      preset = 'super-tab',
+      preset = 'none',
+		['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+		['<C-e>'] = { 'hide', 'fallback' },
+		['<CR>'] = { 'accept', 'fallback' },
+
+		['<Up>'] = { 'snippet_forward', 'fallback' },
+		['<Down>'] = { 'snippet_backward', 'fallback' },
+
+		['<S-Tab>'] = { 'select_prev', 'fallback' },
+		['<Tab>'] = { 'select_next', 'fallback' },
+		['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+		['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
+
+		['<C-k>'] = { 'scroll_documentation_up', 'fallback' },
+		['<C-j>'] = { 'scroll_documentation_down', 'fallback' },
+
+		['<S-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
     },
 
     signature = {
@@ -81,5 +96,4 @@ return {
       },
     },
   },
-	}
 }
