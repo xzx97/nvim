@@ -14,8 +14,8 @@ return {
       nerd_font_variant = 'normal',
     },
     cmdline = {
-      keymap = { preset = 'inherit' },
-      completion = { menu = { auto_show = true } },
+      -- keymap = { preset = 'inherit' },
+      completion = { menu = { auto_show = false } },
     },
     completion = {
       accept = { auto_brackets = { enabled = true } },

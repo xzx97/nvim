@@ -14,6 +14,8 @@ require("plugins")
 
 require("lsp")
 
+vim.o.clipboard = "unnamedplus"
+
 -- 加载 autoload.lua 递归加载 plugins 目录
 -- local load_plugins = require("utils.autoload")
 
