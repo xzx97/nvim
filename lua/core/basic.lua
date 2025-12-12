@@ -27,4 +27,4 @@ vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 
 -- clipboard
-vim.o.clipboard = "unnamed"
+vim.o.clipboard = "unnamed,unnamedplus"
