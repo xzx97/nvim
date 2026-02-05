@@ -62,7 +62,7 @@ return {
 		['<C-k>'] = { 'scroll_documentation_up', 'fallback' },
 		['<C-j>'] = { 'scroll_documentation_down', 'fallback' },
 
-		['<S-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
+		['<c-,>'] = { 'show_signature', 'hide_signature', 'fallback' },
     },
 
     signature = {

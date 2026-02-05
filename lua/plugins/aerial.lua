@@ -44,6 +44,17 @@ return {
           statuscolumn = " ",
         },
       },
+	  keymaps = {
+      ["q"] = "close",
+      ["<Esc>"] = "close",
+      ["<CR>"] = "jump",
+      ["o"] = "toggle",
+      ["za"] = "toggle",
+      ["zc"] = "close",
+      ["zo"] = "open",
+      ["zr"] = "open_all",
+      ["zm"] = "close_all",
+    },
       icons = icons,
       filter_kind = false,
       guides = {
